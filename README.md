@@ -2,7 +2,7 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 
 > **Research Notice:** *Crowd Anomaly Detection using CNN Autoencoder and ConvLSTM* was developed as an unsupervised deep learning surveillance framework for high-density public spaces.
 
@@ -177,7 +177,7 @@ All metrics below represent verified empirical results evaluated on the standard
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/avijain1412/Crowd-Anomaly-Detection.git
+git clone https://github.com/divyanshi-katiyar/Crowd-Anomaly-Detection.git
 cd Crowd-Anomaly-Detection
 ```
 
