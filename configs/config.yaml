@@ -1,0 +1,45 @@
+# Crowd Anomaly Detection System Configuration
+
+# Dataset Settings
+data:
+  train_path: "data/1_Times_Square/View_1/Train"
+  test_path: "data/1_Times_Square/View_1/Test"
+  image_size: [256, 256]
+  sequence_length: 10
+
+# Model 1: CNN Autoencoder (Appearance-based)
+model_ae:
+  in_channels: 3
+  epochs: 10
+  batch_size: 8
+  learning_rate: 0.001
+  checkpoint_path: "results/checkpoints/crowd_autoencoder.pt"
+
+# Model 4: ConvLSTM Autoencoder (Spatio-Temporal)
+model_convlstm:
+  in_channels: 3
+  hidden_dim: 64
+  kernel_size: 3
+  epochs: 8
+  batch_size: 2
+  learning_rate: 0.0001
+  checkpoint_path: "results/checkpoints/convlstm_autoencoder.pt"
+
+# Anomaly Detection & Scoring Settings
+detection:
+  gaussian_sigma: 10.0
+  window_size: 30
+  threshold_percentile: 95.0
+  # Hybrid Fusion weights (Appearance vs. Motion)
+  fusion_weight_app: 0.4
+  fusion_weight_mot: 0.6
+
+# Ground Truth Annotation Window for Evaluation Benchmark
+ground_truth:
+  gt_start: 780
+  gt_end: 830
+
+# Output Artifacts & Visualizations
+output:
+  results_dir: "results"
+  save_plots: true
